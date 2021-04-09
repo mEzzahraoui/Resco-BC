@@ -1,0 +1,31 @@
+﻿<EntityChart>
+  <Name>Training per status</Name>
+  <Kind>Pie</Kind>
+  <LimitCount>3</LimitCount>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>sf_training__c</EntityName>
+    <CamelCase>sf_training__c</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>status__c</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>status__c</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>status__c</Axis>
+</EntityChart>

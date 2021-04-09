@@ -1,0 +1,110 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="1" fleximode="0" fullscreen="1" resize="2" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_account</EntityName>
+  <CamelCase>sf_account</CamelCase>
+  <WorkflowLoad>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Form.name.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.parentid.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.cocoa_growing_since__c.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.potential_volume__c.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.main_farmer__c.IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(main_contact.marital_status__c).IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.(main_contact.birthdate).IsEnabled&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Form.parentid.Label&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:Cooperative&lt;/arg&gt;&lt;/function&gt;&lt;branch e="false" info="set Main Farmer Info" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.main_farmer__c&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;mainFarmer&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.main_farmer__c&lt;/arg&gt;&lt;arg&gt;String:sf_contact&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.main_contact.@this&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:mainFarmer.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="Display / Hide Map" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.billinglatitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.billinglatitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowLoad>
+  <WorkflowItemChanged>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;branch e="true" info="Main Farmer Info" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;ChangedItem&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:main_farmer__c&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;definition e="false"&gt;&lt;var&gt;mainFarmer&lt;/var&gt;&lt;func&gt;LoadReference&lt;/func&gt;&lt;type&gt;Entity&lt;/type&gt;&lt;arg&gt;var:Entity.main_farmer__c&lt;/arg&gt;&lt;arg&gt;String:sf_contact&lt;/arg&gt;&lt;/definition&gt;&lt;function e="false"&gt;&lt;var&gt;Shared.main_contact.@this&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;var:mainFarmer.@this&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;branch e="true" info="Show / Hide Map Info" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.billinglongitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.billinglatitude&lt;/var&gt;&lt;op&gt;ContainsData&lt;/op&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:True&lt;/arg&gt;&lt;/function&gt;&lt;function e="false"&gt;&lt;var&gt;Tabs.Map.IsVisible&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;Boolean:False&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</WorkflowItemChanged>
+  <SharedVariables>&lt;SharedVariables&gt;&lt;Variables&gt;&lt;SharedVariable usage="OnLoadEnabled OnChangeEnabled"&gt;&lt;Name&gt;main_contact&lt;/Name&gt;&lt;CrmType&gt;Entity&lt;/CrmType&gt;&lt;InnerType&gt;sf_contact&lt;/InnerType&gt;&lt;/SharedVariable&gt;&lt;/Variables&gt;&lt;/SharedVariables&gt;</SharedVariables>
+  <PrimaryCommands>custom_getcurrentlocation|Get Current Location||Delete|Delete|</PrimaryCommands>
+  <SharedVariableNames>
+    <string>main_contact.accountid</string>
+    <string>main_contact.birthdate</string>
+    <string>main_contact.communication_language__c</string>
+    <string>main_contact.createdbyid</string>
+    <string>main_contact.createdon</string>
+    <string>main_contact.department</string>
+    <string>main_contact.education_level__c</string>
+    <string>main_contact.email</string>
+    <string>main_contact.fax</string>
+    <string>main_contact.firstname</string>
+    <string>main_contact.id</string>
+    <string>main_contact.id_card_number__c</string>
+    <string>main_contact.id2</string>
+    <string>main_contact.isdeleted</string>
+    <string>main_contact.lastmodifiedbyid</string>
+    <string>main_contact.lastname</string>
+    <string>main_contact.level__c</string>
+    <string>main_contact.literacy_level__c</string>
+    <string>main_contact.mailingcity</string>
+    <string>main_contact.mailingcountry</string>
+    <string>main_contact.mailinggeocodeaccuracy</string>
+    <string>main_contact.mailinglatitude</string>
+    <string>main_contact.mailinglongitude</string>
+    <string>main_contact.mailingpostalcode</string>
+    <string>main_contact.mailingstate</string>
+    <string>main_contact.mailingstreet</string>
+    <string>main_contact.marital_status__c</string>
+    <string>main_contact.masterrecordid</string>
+    <string>main_contact.mobilephone</string>
+    <string>main_contact.modifiedon</string>
+    <string>main_contact.name</string>
+    <string>main_contact.nationality__c</string>
+    <string>main_contact.official_language_understanding__c</string>
+    <string>main_contact.ownerid2</string>
+    <string>main_contact.phone</string>
+    <string>main_contact.photourl</string>
+    <string>main_contact.producer_code__c</string>
+    <string>main_contact.producer_id__c</string>
+    <string>main_contact.recordtypeid</string>
+    <string>main_contact.reportstoid</string>
+    <string>main_contact.salutation</string>
+    <string>main_contact.title</string>
+  </SharedVariableNames>
+  <ClassBinding/>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeight="50" flexiCollapsed="1" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\information (1).png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="parentid"/>
+        <DetailItem SchemaName="cocoa_growing_since__c"/>
+        <DetailItem SchemaName="potential_volume__c"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="DetailTab" flexiHeight="50" flexiCollapsed="1" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\farmer.png" IsIconNameReadOnly="0">
+      <Name>Main farmer</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="main_farmer__c">
+          <LookupViews>&lt;lookup&gt;&lt;extra/&gt;&lt;extra&gt;&lt;filter entity="sf_contact"&gt;&amp;lt;fetch version="1.0"&amp;gt;&amp;lt;entity name="sf_contact"&amp;gt;&amp;lt;filter type="and"&amp;gt;&amp;lt;condition attribute="accountid" operator="eq" value="{{id}}"/&amp;gt;&amp;lt;/filter&amp;gt;&amp;lt;/entity&amp;gt;&amp;lt;/fetch&amp;gt;&lt;/filter&gt;&lt;/extra&gt;&lt;/lookup&gt;</LookupViews>
+        </DetailItem>
+        <DetailItem SchemaName="main_contact.marital_status__c"/>
+        <DetailItem SchemaName="main_contact.birthdate"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="MapTab" flexiHeight="50" flexiCollapsed="1" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\location.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>billinglatitude;billinglongitude</CoordinatesBinding>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="50" flexiOrientation="2" flexiCollapsed="1" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\building.png" IsIconNameReadOnly="0" DocCommands="0" ListCommands="0">
+      <Name>Visits</Name>
+      <CustomName>Visits</CustomName>
+      <Binding SchemaName="sf_visit__c.account__c"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiOrientation="2" flexiCollapsed="1" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\education.png" IsIconNameReadOnly="0">
+      <Name>Trainings</Name>
+      <CustomName>Trainings</CustomName>
+      <Binding SchemaName="sf_training__c.account__c"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiCollapsed="1" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\case-study.png" IsIconNameReadOnly="0">
+      <Name>Cases</Name>
+      <CustomName>Cases</CustomName>
+      <Binding SchemaName="sf_case.accountid"/>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="50" flexiCollapsed="1" NameModified="1" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\location.png" IsIconNameReadOnly="0" DocCommands="0" ListCommands="0">
+      <Name>Farm Lands</Name>
+      <CustomName>Farm Lands</CustomName>
+      <Binding SchemaName="sf_farm_land__c.farm__c"/>
+      <MapSetup>
+        <Zoom>13</Zoom>
+        <AggregatePins>false</AggregatePins>
+        <ExpandPins>true</ExpandPins>
+      </MapSetup>
+    </FormTab>
+    <FormTab xsi:type="IFrameTab" flexiHeader="0" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Web@2x.png" IsIconNameReadOnly="0">
+      <Name>Web</Name>
+      <Url>file://init.html</Url>
+      <IsVisible>false</IsVisible>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

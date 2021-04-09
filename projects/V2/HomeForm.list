@@ -1,0 +1,53 @@
+﻿<EntityListCollection>
+  <EntityName></EntityName>
+  <CamelCase>HomeItem</CamelCase>
+  <WrapperClass>MobileCrm.Controllers.HomeItem</WrapperClass>
+  <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+  <ClassBinding>
+    <SerializedClassBinding name="#Title" label="Title" type="String"/>
+    <SerializedClassBinding name="#SubTitle" label="SubTitle" type="String"/>
+    <SerializedClassBinding name="#Icon" label="Icon" type="Boolean"/>
+  </ClassBinding>
+  <SerializedChildren>
+    <EntityList>
+      <Attributes>
+        <EntityName></EntityName>
+        <CamelCase>HomeItem</CamelCase>
+        <WrapperClass>MobileCrm.Controllers.HomeItem</WrapperClass>
+        <VisualStudioProjectId>c0f71827-e4f6-464e-a71d-c36687d5738e</VisualStudioProjectId>
+        <ClassBinding>
+          <SerializedClassBinding name="#Title" label="Title" type="String"/>
+          <SerializedClassBinding name="#SubTitle" label="SubTitle" type="String"/>
+          <SerializedClassBinding name="#Icon" label="Icon" type="Boolean"/>
+        </ClassBinding>
+      </Attributes>
+      <Name>Default</Name>
+      <Kind>List</Kind>
+      <AutoWideWidth>0</AutoWideWidth>
+      <AutoHeader>1</AutoHeader>
+      <OrderBy></OrderBy>
+      <SerializedBindings/>
+      <MaxColumns>0</MaxColumns>
+      <SerializedTemplates>
+        <RowTemplate>
+          <DesignWidth>320</DesignWidth>
+          <DesignHeight>48</DesignHeight>
+          <Name>Default</Name>
+          <Width>426</Width>
+          <Height>68</Height>
+          <SerializedBackground>-13421773</SerializedBackground>
+          <SerializedSelectedBackground>-10643083</SerializedSelectedBackground>
+          <SerializedChildren>
+            <CellTemplate SchemaName="#Icon">
+              <StyleName>BlackTag</StyleName>
+              <Bounds>61,19,292,30</Bounds>
+              <CellKind>1</CellKind>
+              <Anchor>15</Anchor>
+            </CellTemplate>
+          </SerializedChildren>
+        </RowTemplate>
+      </SerializedTemplates>
+      <CustomProperties/>
+    </EntityList>
+  </SerializedChildren>
+</EntityListCollection>

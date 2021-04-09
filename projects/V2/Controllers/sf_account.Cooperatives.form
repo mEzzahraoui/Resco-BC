@@ -1,0 +1,28 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_account</EntityName>
+  <CamelCase>sf_account</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" flexiHeight="4" flexiHeader="2" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\General@2x.png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="name"/>
+        <DetailItem SchemaName="parentid"/>
+        <DetailItem SchemaName="organisation_id__c"/>
+        <DetailItem SchemaName="phone"/>
+        <DetailItem SchemaName="organisation_type__c"/>
+        <DetailItem SchemaName="organisation_code__c"/>
+      </SerializedChildren>
+    </FormTab>
+    <FormTab xsi:type="AssociatedTab" flexiHeight="4" NameModified="0" IconModified="0" EntityIconName="" IsIconNameReadOnly="0">
+      <Name>Accounts List</Name>
+      <Binding SchemaName="sf_account.parentid"/>
+    </FormTab>
+    <FormTab xsi:type="MapTab" NameModified="0" IconModified="0" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\Map@2x.png" IsIconNameReadOnly="0">
+      <Name>Map</Name>
+      <CoordinatesBinding>billinglatitude;billinglongitude</CoordinatesBinding>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

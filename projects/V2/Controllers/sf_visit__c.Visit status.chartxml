@@ -1,0 +1,48 @@
+﻿<EntityChart>
+  <Name>Visit status</Name>
+  <Kind>Pie</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="sf_visit__c">
+      <filter type="and">
+        <filter type="or">
+          <filter type="and">
+            <condition attribute="planned_end_time__c" operator="this-week"/>
+            <condition attribute="planned_start_time__c" operator="this-week"/>
+          </filter>
+          <filter type="and">
+            <condition attribute="actual_start_time__c" operator="this-week"/>
+            <condition attribute="actual_end_time__c" operator="this-week"/>
+          </filter>
+        </filter>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>sf_visit__c</EntityName>
+    <CamelCase>sf_visit__c</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>status__c</Attribute>
+      <Color>#FF0000FF</Color>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>status__c</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>status__c</Axis>
+  <LabelStyle>Outside</LabelStyle>
+</EntityChart>

@@ -1,0 +1,22 @@
+1
+637533188811080000
+UseFlexiForms,635998035965505589,0,true
+VerticalFlexiList,636094539230932579,1,true
+AutoListHeader,636331074241002464,0,Never
+MapPinAggregation,637533188811080000,0,false
+MapPinExpansion,636725308813213053,0,true
+IsFullScreen,636735480954990605,0,false
+AskBeforeExit,636650052034776698,0,true
+ChromiumWebBrowser,636735480954990605,0,true
+SalesforceDisableMultipleLayouts,637048419229670000,0,false
+SalesforceUseFilesInsteadAttachments,636952474872350000,0,true
+RecordQuality,637520505476960000,0,High
+AllowPhotoCropping,637520505476960000,0,true
+RequireSyncLogin,637518399306630000,0,false
+OnlineMode,637518399306630000,1,Never
+AllowOnlineModeSwitch,637518399306630000,1,false
+GoingOnlineMode,636894412159770000,0,AskUserToSync
+EmailSignature,636735480954990605,0,Sent from Resco Mobile Inspections
+AsyncAttachmentsDownload,636725130684149851,0,true
+MaxSyncCount,636735480954990605,0,1000000
+MaxAttachmentSize,636735480954990605,0,5000000

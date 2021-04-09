@@ -1,0 +1,52 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_training__c</EntityName>
+    <CamelCase>sf_training__c</CamelCase>
+  </Attributes>
+  <Name>Training</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>actual_end_time__c</string>
+    <string>actual_start_time__c</string>
+    <string>id</string>
+    <string>number_of_participants__c</string>
+    <string>planned_end_time__c</string>
+    <string>planned_start_time__c</string>
+    <string>remediation_plan_steps__c</string>
+    <string>status__c</string>
+    <string>name</string>
+    <string>type__c</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="type__c">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,146,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="status__c">
+          <StyleName>r_gray</StyleName>
+          <Bounds>157,31,152,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

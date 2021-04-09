@@ -1,0 +1,21 @@
+﻿<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0">
+  <Columns>2</Columns>
+  <Rows>3</Rows>
+  <Items>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="sf_visit__c;sf_visit__c.Visit status" Options="3">
+      <Bounds>0,0,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="sf_visit__c;sf_visit__c.Visits per type" Options="3">
+      <Bounds>1,0,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="sf_training__c;sf_training__c.Training per status" Options="3">
+      <Bounds>0,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="sf_training__c;sf_training__c.Number of participent per training" Options="3">
+      <Bounds>1,1,1,1</Bounds>
+    </DashboardComponent>
+    <DashboardComponent xsi:type="DashboardEntityComponent" Kind="Chart" Binding="sf_target__c" Options="3">
+      <Bounds>0,2,2,1</Bounds>
+    </DashboardComponent>
+  </Items>
+</Dashboard>

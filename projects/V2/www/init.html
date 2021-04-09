@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Empty Offline HTML page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <script src="JSBridge.js"></script>
+</head>
+
+<body>
+    <script>
+        MobileCRM.Platform.getLocation(
+            function (res) {
+                if (res.latitude && res.longitude) {
+                    MobileCRM.UI.EntityForm.requestObject(
+                        function (entityForm) {
+                             entityForm.entity.properties.billinglatitude = res.latitude;
+                             entityForm.entity.properties.billinglongitude = res.longitude;
+                        },
+                        MobileCRM.bridge.alert
+                    );
+                }
+            },
+            MobileCRM.bridge.alert
+        );
+
+
+        MobileCRM.UI.EntityForm.onCommand("custom_getcurrentlocation", function (entityForm) {
+            try {
+                MobileCRM.Platform.getLocation(
+                    function (res) {
+                        if (res.latitude && res.longitude) {
+                            MobileCRM.UI.EntityForm.requestObject(
+                                function (entityForm) {
+                                    var today = new Date();
+                                    var date = today.getFullYear() + '-' + (today.getMonth() + 1) +
+                                        '-' + today.getDate();
+                                    var time = today.getHours() + ":" + today.getMinutes() + ":" + today
+                                        .getSeconds();
+                                    var dateTime = date + ' ' + time;
+                                    var farmLand = new MobileCRM.DynamicEntity.createNew(
+                                        "sf_farm_land__c");
+                                    farmLand.properties["farm_coordinates__latitude__s"] = res.latitude;
+                                    farmLand.properties["farm_coordinates__longitude__s"] = res
+                                        .longitude;
+                                    farmLand.properties["name"] = 'FL' + dateTime;
+                                    farmLand.properties["farm__c"] = new MobileCRM.Reference(
+                                        "sf_account",
+                                        entityForm.entity.properties.id);
+                                    //entityForm.entity.properties.statecode
+                                    farmLand.save(function (err) {
+                                        if (!err) {
+
+                                        } else MobileCRM.bridge.alert("An error is eccured!" +
+                                            err);
+                                    }, null);
+
+
+
+                                },
+                                MobileCRM.bridge.alert
+                            );
+                        }
+                    },
+                    MobileCRM.bridge.alert
+                );
+
+            } catch (err) {
+                MobileCRM.bridge.alert(err);
+            }
+        }, true, null);
+    </script>
+</body>
+
+</html>

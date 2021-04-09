@@ -1,0 +1,43 @@
+﻿<EntityChart>
+  <Name>Target overview</Name>
+  <Kind>Gauge</Kind>
+  <LimitCount>3</LimitCount>
+  <Fetch version="1.0">
+    <entity name="sf_target__c">
+      <filter type="and">
+        <condition attribute="start_date__c" operator="this-week"/>
+        <condition attribute="end_date__c" operator="this-week"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+    <ValueType>Constant</ValueType>
+  </MinValue>
+  <MaxValue>
+    <Attribute>target__c</Attribute>
+    <Color>#FF0000FF</Color>
+    <Aggregation>Sum</Aggregation>
+  </MaxValue>
+  <TargetValue>
+    <Attribute>actual__c</Attribute>
+    <Color>#FFe6cba3</Color>
+    <Aggregation>Sum</Aggregation>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>sf_target__c</EntityName>
+    <CamelCase>sf_target__c</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>actual__c</Attribute>
+      <Color>#FF0000FF</Color>
+      <Aggregation>Sum</Aggregation>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries/>
+  </GroupBySeries>
+  <Axis/>
+</EntityChart>

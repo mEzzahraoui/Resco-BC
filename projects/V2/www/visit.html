@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Empty Offline HTML page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+    <script src="JSBridge.js"></script>
+</head>
+
+<body>
+    <script>
+        MobileCRM.UI.EntityForm.onCommand("custom_start_visit", function (entityForm) {
+            try {
+                var editedEntity = entityForm.entity;
+                editedEntity.properties.actual_start_time__c = getNow();
+                editedEntity.properties.status__c = 'Started'
+            } catch (err) {
+                MobileCRM.bridge.alert(err);
+            }
+        }, true, null);
+
+        MobileCRM.UI.EntityForm.onCommand("custom_end_visit", function (entityForm) {
+            try {
+                var editedEntity = entityForm.entity;
+                editedEntity.properties.actual_end_time__c = getNow();
+                editedEntity.properties.status__c = 'Finished'
+            } catch (err) {
+                MobileCRM.bridge.alert(err);
+            }
+        }, true, null);
+
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function getNow() {
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+            var hour = date.getHours();
+            var minutes = date.getMinutes();
+            var timezoneoffset = date.getTimezoneOffset(); //convert timeZone off to min + hours
+            if (timezoneoffset != 0) {
+                var num;
+                num = timezoneoffset < 0 ? timezoneoffset * (-1) : timezoneoffset;
+                var h = (num / 60);
+                var rh = Math.floor(h);
+                var mn = (h - rh) * 60;
+                var rmn = Math.round(mn);
+                rh = timezoneoffset < 0 ? rh * (-1) : rh;
+                rmn = timezoneoffset < 0 ? rmn * (-1) : rmn;
+                hour += rh;
+                minutes += rmn;
+            }
+            var d = year + "-" +
+                addZero(month) + "-" + addZero(day) + "T" + addZero(hour) + ":" + addZero(minutes) + ":30Z";
+            return d;
+        }
+    </script>
+</body>
+
+</html>

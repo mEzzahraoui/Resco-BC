@@ -1,0 +1,19 @@
+﻿<EntityForm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:dummy="0" flexi="0" fleximode="1" fullscreen="0" resize="0" version="2">
+  <IsContactForm>false</IsContactForm>
+  <EntityName>sf_visit_step__c</EntityName>
+  <CamelCase>sf_visit_step__c</CamelCase>
+  <PrimaryCommands>!defcmd</PrimaryCommands>
+  <EnabledWorkflows>OnLoadEnabled OnChangeEnabled OnSaveEnabled OnExecuteCommand OnCanExecuteCommand OnExecuteButton</EnabledWorkflows>
+  <SerializedChildrenV2>
+    <FormTab xsi:type="DetailTab" NameModified="0" IconModified="1" EntityIconName="MobileCrm\Images.MonoTouch\Tabs\information (1).png" IsIconNameReadOnly="0">
+      <Name>General</Name>
+      <SerializedChildren>
+        <DetailItem SchemaName="visit__c"/>
+        <DetailItem SchemaName="target__c"/>
+        <DetailItem SchemaName="type__c"/>
+        <DetailItem SchemaName="done__c"/>
+        <DetailItem SchemaName="duration__c"/>
+      </SerializedChildren>
+    </FormTab>
+  </SerializedChildrenV2>
+</EntityForm>

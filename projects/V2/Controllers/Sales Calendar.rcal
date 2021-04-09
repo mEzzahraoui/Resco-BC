@@ -1,0 +1,13 @@
+﻿<Tourplan>
+  <Items>
+    <TourplanComponent>
+      <Binding>sf_visit__c</Binding>
+      <Xml>&lt;?xml version="1.0" ?&gt;&lt;Workflow e="true" isvalid="true" syntaxVersion="11" version="0"&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:#ffcfcdbb&lt;/arg&gt;&lt;/function&gt;&lt;branch e="true" info="" &gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status__c&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Planned&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:#ff5c8a97&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status__c&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Finished&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:#ff94d055&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;if e="true"&gt;&lt;conditions e="true" op="And"&gt;&lt;condition e="false"&gt;&lt;var&gt;Entity.status__c&lt;/var&gt;&lt;op&gt;Equal&lt;/op&gt;&lt;arg&gt;String:Started&lt;/arg&gt;&lt;/condition&gt;&lt;/conditions&gt;&lt;action&gt;&lt;function e="false"&gt;&lt;var&gt;Color&lt;/var&gt;&lt;func&gt;Assign&lt;/func&gt;&lt;arg&gt;String:#ffe6cba3&lt;/arg&gt;&lt;/function&gt;&lt;/action&gt;&lt;/if&gt;&lt;/branch&gt;&lt;/Workflow&gt;</Xml>
+    </TourplanComponent>
+  </Items>
+  <Version>1</Version>
+  <AllowedViews>sf_visit__c.Finished Visits:sf_visit__c.Planned visit:sf_visit__c.Started Visits:sf_visit__c.@Visits</AllowedViews>
+  <IsHub>true</IsHub>
+  <BusinessDaysMask>0</BusinessDaysMask>
+  <ViewsMask>6</ViewsMask>
+</Tourplan>

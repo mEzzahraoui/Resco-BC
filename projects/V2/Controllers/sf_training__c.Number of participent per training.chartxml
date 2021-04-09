@@ -1,0 +1,32 @@
+﻿<EntityChart>
+  <Name>Number of participent per training</Name>
+  <Kind>Column</Kind>
+  <LimitCount>3</LimitCount>
+  <MinValue>
+    <Color>#FF0000FF</Color>
+  </MinValue>
+  <MaxValue>
+    <Color>#FF0000FF</Color>
+  </MaxValue>
+  <TargetValue>
+    <Color>#FF0000FF</Color>
+  </TargetValue>
+  <SerializedBindings/>
+  <Attributes>
+    <EntityName>sf_training__c</EntityName>
+    <CamelCase>sf_training__c</CamelCase>
+  </Attributes>
+  <Series>
+    <Series>
+      <Attribute>number_of_participants__c</Attribute>
+      <Color>#FF0000FF</Color>
+      <Aggregation>Sum</Aggregation>
+    </Series>
+  </Series>
+  <GroupBySeries>
+    <GroupBySeries>
+      <Attribute>name</Attribute>
+    </GroupBySeries>
+  </GroupBySeries>
+  <Axis>name</Axis>
+</EntityChart>

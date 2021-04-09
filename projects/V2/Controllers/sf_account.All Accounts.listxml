@@ -1,0 +1,58 @@
+﻿<EntityList UseSyncFilter="true">
+  <Attributes>
+    <EntityName>sf_account</EntityName>
+    <CamelCase>sf_account</CamelCase>
+    <VisualStudioProjectId>00000000-0000-0000-0000-000000000000</VisualStudioProjectId>
+    <ClassBinding/>
+  </Attributes>
+  <Name>All Accounts</Name>
+  <Kind>List</Kind>
+  <IsDefault>true</IsDefault>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <FilterAllowedFields>name;phone;type</FilterAllowedFields>
+  <MultiSelectCommands>Delete|||Favorite|||Export|||EmailLink||</MultiSelectCommands>
+  <SerializedBindings>
+    <string>id2</string>
+    <string>name</string>
+    <string>phone</string>
+    <string>type</string>
+    <string>billingcountry</string>
+    <string>billinglatitude</string>
+    <string>billinglongitude</string>
+    <string>billingstate</string>
+    <string>isdeleted</string>
+    <string>id</string>
+    <string>industry</string>
+    <string>shippinglatitude</string>
+    <string>shippinglongitude</string>
+  </SerializedBindings>
+  <HasGpsFields>true</HasGpsFields>
+  <MaxColumns>0</MaxColumns>
+  <Search>
+    <attribute schema="billingcity" method="Contains"/>
+    <attribute schema="billingcountry" method="Contains"/>
+    <attribute schema="industry" method="Contains"/>
+    <attribute schema="name" method="Contains"/>
+    <attribute schema="ownerid2" method="Contains" reference="true"/>
+  </Search>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>40</Height>
+      <Buttons>none</Buttons>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>black</StyleName>
+          <Bounds>10,5,298,31</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>0</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+  <CustomProperties/>
+</EntityList>

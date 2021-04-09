@@ -1,0 +1,63 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_visit__c</EntityName>
+    <CamelCase>sf_visit__c</CamelCase>
+  </Attributes>
+  <Name>Started Visits</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SortAllowedFields>account__c;actual_end_time__c;actual_start_time__c;coach__c;farm_details__c;name;planned_end_time__c;planned_start_time__c;status__c;target__c;type__c;visit_type__c</SortAllowedFields>
+  <FilterAllowedFields>account__c;name;planned_end_time__c;planned_start_time__c;type__c</FilterAllowedFields>
+  <SerializedBindings>
+    <string>account__c</string>
+    <string>farm_details__c</string>
+    <string>id</string>
+    <string>planned_end_time__c</string>
+    <string>planned_start_time__c</string>
+    <string>status__c</string>
+    <string>type__c</string>
+    <string>visit_type__c</string>
+    <string>name</string>
+    <string>account__c.sf_account.name</string>
+    <string>account__c.sf_account.main_farmer__c.sf_contact.name</string>
+  </SerializedBindings>
+  <CalendarFields>planned_start_time__c;planned_end_time__c</CalendarFields>
+  <MaxColumns>0</MaxColumns>
+  <Fetch version="1.0">
+    <entity name="sf_visit__c">
+      <filter type="and">
+        <condition attribute="status__c" operator="eq" value="Started"/>
+      </filter>
+    </entity>
+  </Fetch>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="account__c.sf_account.name">
+          <StyleName>primary</StyleName>
+          <Bounds>10,2,302,28</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="visit_type__c">
+          <StyleName>gray</StyleName>
+          <Bounds>10,31,146,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>5</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="status__c">
+          <StyleName>r_gray</StyleName>
+          <Bounds>157,31,152,13</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>13</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

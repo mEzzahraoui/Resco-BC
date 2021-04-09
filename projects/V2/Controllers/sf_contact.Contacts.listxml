@@ -1,0 +1,39 @@
+﻿<EntityList>
+  <Attributes>
+    <EntityName>sf_contact</EntityName>
+    <CamelCase>sf_contact</CamelCase>
+  </Attributes>
+  <Name>Contacts</Name>
+  <Kind>List</Kind>
+  <AutoWideWidth>0</AutoWideWidth>
+  <OrderBy>name</OrderBy>
+  <SerializedBindings>
+    <string>name</string>
+    <string>id</string>
+    <string>id_card_number__c</string>
+  </SerializedBindings>
+  <MaxColumns>0</MaxColumns>
+  <SerializedTemplates>
+    <RowTemplate>
+      <DesignWidth>320</DesignWidth>
+      <DesignHeight>48</DesignHeight>
+      <Name>Default</Name>
+      <Width>320</Width>
+      <Height>48</Height>
+      <SerializedChildren>
+        <CellTemplate SchemaName="name">
+          <StyleName>black</StyleName>
+          <Bounds>10,5,300,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>0</Anchor>
+        </CellTemplate>
+        <CellTemplate SchemaName="id_card_number__c">
+          <StyleName>gray</StyleName>
+          <Bounds>10,25,300,20</Bounds>
+          <CellKind>0</CellKind>
+          <Anchor>0</Anchor>
+        </CellTemplate>
+      </SerializedChildren>
+    </RowTemplate>
+  </SerializedTemplates>
+</EntityList>

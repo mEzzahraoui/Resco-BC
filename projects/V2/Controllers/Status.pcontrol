@@ -1,0 +1,6 @@
+﻿<ProcessControl>
+  <ProcessName>Status</ProcessName>
+  <Entity>sf_visit__c</Entity>
+  <Field>status__c</Field>
+  <ProcessSteps>Planned;undefined;undefined;undefined;false;false|Started;undefined;undefined;undefined;false;false|Finished;undefined;undefined;undefined;false;false|</ProcessSteps>
+</ProcessControl>
